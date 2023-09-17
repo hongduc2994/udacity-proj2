@@ -1,0 +1,14 @@
+[
+  {
+    "ParameterKey": "ApplicationsBucket",
+    "ParameterValue": "proj2-app-bucket"
+  },
+  {
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "UdacityProject2"
+	},
+  {
+    "ParameterKey": "WebServerPolicies",
+    "ParameterValue": "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore,arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+  }
+]
