@@ -100,12 +100,15 @@ Resources:
             systemctl start apache2.service
             cd /var/www/html
             echo "it works! Udagram, Udacity" > index.html
-        Placement:
-          Tenancy: dedicated
+        BlockDeviceMappings:
+          - DeviceName: "/dev/sda1"
+            Ebs:
+              VolumeSize: '10'
+              DeleteOnTermination: true
+              VolumeType: 'gp2'
         # Using ubuntu 20 cause 18 is deprecated
         ImageId: ami-0261755bbcb8c4a84
         InstanceType: t3.medium
-        KeyName: proj2-kp
   WebAppGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
